@@ -2,6 +2,8 @@ import React from "react";
 import "./Header.scss";
 
 const Header = () => {
+  console.log("Header component rendered");
+
   return (
     <header id="home" className="hero">
       <div className="hero-content">
