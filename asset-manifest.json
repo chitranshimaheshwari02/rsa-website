@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/rsa-website/static/css/main.a1335893.css",
-    "main.js": "/rsa-website/static/js/main.b8c23d68.js",
-    "static/media/court-building.jpg": "/rsa-website/static/media/court-building.a375685d3032bca5bde5.jpg",
-    "index.html": "/rsa-website/index.html",
-    "main.a1335893.css.map": "/rsa-website/static/css/main.a1335893.css.map",
-    "main.b8c23d68.js.map": "/rsa-website/static/js/main.b8c23d68.js.map"
+    "main.css": "./static/css/main.1ea4ecd0.css",
+    "main.js": "./static/js/main.f87e3765.js",
+    "static/media/court-building.jpg": "./static/media/court-building.a375685d3032bca5bde5.jpg",
+    "index.html": "./index.html",
+    "main.1ea4ecd0.css.map": "./static/css/main.1ea4ecd0.css.map",
+    "main.f87e3765.js.map": "./static/js/main.f87e3765.js.map"
   },
   "entrypoints": [
-    "static/css/main.a1335893.css",
-    "static/js/main.b8c23d68.js"
+    "static/css/main.1ea4ecd0.css",
+    "static/js/main.f87e3765.js"
   ]
 }
