@@ -1,38 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #222;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar {
+  width: 100%;
+  background: #0c2340;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar .logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #f1c40f; 
 }
 
-.App-header {
-  background-color: #282c34;
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a {
+  color: #fff;
+}
+
+.nav-links li a:hover {
+  color: #f1c40f;
+}
+
+/* Page Container */
+.page-container {
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  background: #fff;
+}
+
+.home {
+  background: url("/public/hero-bg.jpg") no-repeat center center/cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
   color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
 }
 
-.App-link {
-  color: #61dafb;
+.home h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.home p {
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.home button {
+  background: #f1c40f;
+  color: #0c2340;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.home button:hover {
+  background: #d4ac0d;
+}
+
+.about,
+.people,
+.practice,
+.awareness,
+.media,
+.testimonials,
+.contact {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about h1,
+.people h1,
+.practice h1,
+.awareness h1,
+.media h1,
+.testimonials h1,
+.contact h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #0c2340;
+}
+
+.about p,
+.people p,
+.practice p,
+.awareness p,
+.media p,
+.testimonials p,
+.contact p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

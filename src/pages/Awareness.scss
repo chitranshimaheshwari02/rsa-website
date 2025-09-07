@@ -1,0 +1,57 @@
+.awareness-section {
+  min-height: 100vh;            // full page height
+  padding: 120px 40px 60px;     // top padding accounts for fixed navbar
+  background: #f5f7fa;          // light background for contrast
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+  p {
+    max-width: 800px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    color: #444;
+  }
+
+  .awareness-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1100px;
+
+    .card {
+      background: #fff;
+      padding: 25px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: left;
+
+      h3 {
+        font-size: 1.3rem;
+        margin-bottom: 12px;
+        color: #111;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #555;
+      }
+
+      &:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}

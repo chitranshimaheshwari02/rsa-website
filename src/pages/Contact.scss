@@ -1,0 +1,40 @@
+.contact-page {
+  min-height: 100vh; // full height
+  padding: 100px 20px 50px; // space for navbar
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f9f9f9;
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    input, textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px;
+      background: #ffcc00;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+
+      &:hover {
+        background: #e6b800;
+      }
+    }
+  }
+}
