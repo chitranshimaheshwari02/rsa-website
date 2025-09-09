@@ -13,13 +13,12 @@
     color: #bbb;
 
     span {
-      color: #f7c948;   // highlight year or brand
+      color: #f7c948;  
       font-weight: 600;
     }
   }
 }
 
-/* ✅ Responsive */
 @media (max-width: 768px) {
   .footer {
     font-size: 0.8rem;
