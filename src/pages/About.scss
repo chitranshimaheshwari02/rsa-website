@@ -1,3 +1,25 @@
+// .about {
+//   padding: 5rem 3rem;
+//   text-align: center;
+//   background: #f9f9f9;
+
+//   h2 {
+//     font-size: 2rem;
+//     margin-bottom: 1rem;
+//     color: #1e2a3a;
+//     border-bottom: 3px solid #0056d6;
+//     display: inline-block;
+//     padding-bottom: 0.5rem;
+//   }
+
+//   p {
+//     max-width: 800px;
+//     margin: 1rem auto;
+//     font-size: 1.1rem;
+//     color: #333;
+//   }
+// }
+
 .about {
   padding: 5rem 3rem;
   text-align: center;
@@ -17,5 +39,49 @@
     margin: 1rem auto;
     font-size: 1.1rem;
     color: #333;
+    line-height: 1.6;
+  }
+}
+
+/* ✅ Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .about {
+    padding: 4rem 2rem;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 3rem 1.5rem;
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 2.5rem 1rem;
+
+    h2 {
+      font-size: 1.4rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
   }
 }
