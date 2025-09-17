@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.923780d1.css",
-    "main.js": "./static/js/main.eccb035d.js",
+    "main.css": "./static/css/main.f5caef46.css",
+    "main.js": "./static/js/main.f11f5665.js",
     "static/media/court-building.jpg": "./static/media/court-building.a375685d3032bca5bde5.jpg",
     "index.html": "./index.html",
-    "main.923780d1.css.map": "./static/css/main.923780d1.css.map",
-    "main.eccb035d.js.map": "./static/js/main.eccb035d.js.map"
+    "main.f5caef46.css.map": "./static/css/main.f5caef46.css.map",
+    "main.f11f5665.js.map": "./static/js/main.f11f5665.js.map"
   },
   "entrypoints": [
-    "static/css/main.923780d1.css",
-    "static/js/main.eccb035d.js"
+    "static/css/main.f5caef46.css",
+    "static/js/main.f11f5665.js"
   ]
 }
