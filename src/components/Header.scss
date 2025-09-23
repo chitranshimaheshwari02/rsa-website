@@ -13,47 +13,69 @@ $text-light: #f5f5f5;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
+  z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
   
-  .nav-links a {
-    color: rgba(255, 255, 255, 0.8);
+  .nav-logo a {
+    color: $text-light;
+    font-weight: bold;
+    font-size: 1.2rem;
     text-decoration: none;
-    margin: 0 1rem;
-    padding: 0.5rem 0;
-    position: relative;
-    transition: color 0.3s ease;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      margin: 0 1rem;
+      padding: 0.5rem 0;
+      position: relative;
+      transition: color 0.3s ease;
 
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: $accent-gold;
-      transition: width 0.3s ease;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: $accent-gold;
+        transition: width 0.3s ease;
+      }
+      &:hover {
+        color: #fff;
+        &::after { width: 100%; }
+      }
     }
 
-    &:hover {
-      color: #fff;
-      &::after {
-        width: 100%;
+    a.nav-cta {
+      border: 1px solid $accent-gold;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      &:hover {
+        background: $accent-gold;
+        color: $primary-purple-blue-dark; 
       }
     }
   }
 
-  .nav-links a.nav-cta {
-    border: 1px solid $accent-gold;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    
-    &:hover {
-      background: $accent-gold;
-      color: $primary-purple-blue-dark; 
+  .hamburger-menu {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    .line {
+      width: 25px;
+      height: 3px;
+      background-color: $text-light;
+      border-radius: 3px;
     }
   }
 }
+
 .hero {
   height: 100vh;
   width: 100%;
@@ -64,20 +86,12 @@ $text-light: #f5f5f5;
   color: $text-light;
   position: relative;
   overflow: hidden;
-
-
+  padding-top: 80px;
   background: linear-gradient(135deg, $primary-purple-blue-dark, $primary-purple-blue-light);
   background-size: 200% 200%; 
   animation: animatedGradient 25s ease infinite; 
   background-position: 0% 50%; 
 }
-
-@keyframes animatedGradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
 
 .hero-content {
   position: relative;
@@ -139,6 +153,12 @@ $text-light: #f5f5f5;
   }
 }
 
+@keyframes animatedGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 @keyframes animateUp {
   from { opacity: 0; transform: translateY(25px); }
   to { opacity: 1; transform: translateY(0); }
@@ -155,14 +175,46 @@ $text-light: #f5f5f5;
 .hero-cta { animation: animateUp 0.7s ease-out 1.1s; }
 
 @media (max-width: 768px) {
-  .hero .hero-content h1 { font-size: 2.5rem; }
-  .hero .hero-content h3 { font-size: 1.2rem; }
-  .main-nav { padding: 1rem 1.5rem; }
+  .main-nav {
+    padding: 1rem 1.5rem;
+
+    .hamburger-menu {
+      display: flex;
+    }
+
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: $primary-purple-blue-dark;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+
+      &.open {
+        display: flex;
+      }
+
+      a {
+        margin: 1rem 0;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .hero-content {
+    h1 { font-size: 2.5rem; }
+    h3 { font-size: 1.2rem; }
+  }
 }
 
 @media (max-width: 480px) {
-  .hero .hero-content h1 { font-size: 2rem; }
-  .hero .hero-content h3 { font-size: 1rem; }
-  .hero .hero-content p { font-size: 0.9rem; }
-  .hero .hero-content .btn-primary { padding: 0.8rem 1.8rem; font-size: 0.9rem; }
-}
+  .hero-content {
+    h1 { font-size: 2rem; }
+    h3 { font-size: 1rem; }
+    p { font-size: 0.9rem; }
+    .btn-primary { padding: 0.8rem 1.8rem; font-size: 0.9rem; }
+  } 
+} 
