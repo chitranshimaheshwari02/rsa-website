@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "./static/css/main.f5caef46.css",
-    "main.js": "./static/js/main.f11f5665.js",
-    "static/media/court-building.jpg": "./static/media/court-building.a375685d3032bca5bde5.jpg",
+    "main.css": "./static/css/main.27691ea6.css",
+    "main.js": "./static/js/main.75524698.js",
+    "static/media/MP_High_Court.png": "./static/media/MP_High_Court.cdb91f7f38a09c5b1b6e.png",
     "index.html": "./index.html",
-    "main.f5caef46.css.map": "./static/css/main.f5caef46.css.map",
-    "main.f11f5665.js.map": "./static/js/main.f11f5665.js.map"
+    "main.27691ea6.css.map": "./static/css/main.27691ea6.css.map",
+    "main.75524698.js.map": "./static/js/main.75524698.js.map"
   },
   "entrypoints": [
-    "static/css/main.f5caef46.css",
-    "static/js/main.f11f5665.js"
+    "static/css/main.27691ea6.css",
+    "static/js/main.75524698.js"
   ]
 }
