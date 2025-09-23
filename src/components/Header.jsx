@@ -2,19 +2,20 @@ import React from "react";
 import "./Header.scss";
 
 const Header = () => {
-  console.log("Header component rendered");
-
   return (
     <header id="home" className="hero">
       <div className="hero-content">
-        <h1>
+        <h1 className="hero-title">
           Raj Shrivastava <span>and Associates</span>
         </h1>
-        <h3>Advocates & Legal Consultants</h3>
-        <p>
+
+        <div className="decorative-line"></div>
+
+        <h3 className="hero-tagline">Advocates & Legal Consultants</h3>
+        <p className="hero-description">
           Excellence in Legal Practice • Commitment to Justice • Trusted Legal Counsel
         </p>
-        <button className="btn-primary">Get Legal Consultation</button>
+        <button className="hero-cta btn-primary">Get Legal Consultation</button>
       </div>
     </header>
   );

@@ -1,132 +1,145 @@
-.practice {
+$primary-color: #0056d6;
+$heading-color: #1e2a3a;
+$text-color: #333;
+$background-color: #fdfdfd;
+$border-color: #e0e0e0;
+
+.practice-container {
   padding: 5rem 3rem;
-  background: #fdfdfd;
-  color: #222;
+  background: $background-color;
+  color: $text-color;
   line-height: 1.7;
 
-  h2 {
-    font-size: 2.5rem;
+  .title-wrapper {
     text-align: center;
     margin-bottom: 3rem;
-    color: #1e2a3a;
-    border-bottom: 3px solid #0056d6;
-    display: inline-block;
-    padding-bottom: 0.5rem;
-  }
 
-  .practice-area {
-    margin-bottom: 3rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid #e0e0e0;
-    text-align: left;
-
-    &:last-child {
-      border-bottom: none;
-    }
-
-    h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #0056d6;
-    }
-
-    h4 {
-      font-size: 1.2rem;
-      margin: 1.2rem 0 0.8rem;
-      color: #1e2a3a;
-      font-weight: 600;
-    }
-
-    p {
-      margin: 1rem 0;
-      font-size: 1.05rem;
-      color: #444;
-      line-height: 1.7;
-      max-width: 900px;
-    }
-
-    ul {
-      margin-left: 1.2rem;
-      margin-bottom: 1.2rem;
-      padding-left: 1rem;
-
-      li {
-        margin-bottom: 0.6rem;
-        font-size: 1.05rem;
-        color: #333;
-        line-height: 1.6;
-        list-style-type: disc;
-      }
+    h2 {
+      font-size: 2.5rem;
+      color: $heading-color;
+      border-bottom: 3px solid $primary-color;
+      display: inline-block;
+      padding-bottom: 0.5rem;
+      margin: 0;
     }
   }
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .practice {
-    padding: 4rem 2rem;
+.tabs-nav {
+  display: flex;
+  justify-content: center; 
+  position: relative;
+  border-bottom: 2px solid $border-color;
+  margin-bottom: 2.5rem;
 
-    h2 {
-      font-size: 2.2rem;
+  button {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: lighten($heading-color, 20%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    white-space: nowrap; 
+
+    &:hover {
+      color: $primary-color;
     }
 
-    .practice-area {
-      h3 {
-        font-size: 1.6rem;
-      }
-      h4 {
-        font-size: 1.1rem;
-      }
-      p,
-      li {
-        font-size: 1rem;
-      }
+    &.active {
+      color: $primary-color;
     }
+  }
+
+  .slider {
+    position: absolute;
+    bottom: -2px; 
+    height: 3px;
+    background-color: $primary-color;
+    transition: left 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+                width 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+}
+
+
+.tab-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  
+  h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: $primary-color;
+  }
+  
+  .content-inner {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    margin: 1.2rem 0 0.8rem;
+    color: $heading-color;
+    font-weight: 600;
+  }
+
+  p {
+    margin: 1rem 0;
+    font-size: 1.05rem;
+    color: #444;
+  }
+
+  ul {
+    margin-left: 1.2rem;
+    padding-left: 1rem;
+    margin-bottom: 1.2rem;
+
+    li {
+      margin-bottom: 0.6rem;
+      font-size: 1.05rem;
+      color: $text-color;
+      list-style-type: disc;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @media (max-width: 768px) {
-  .practice {
+  .practice-container {
     padding: 3rem 1.5rem;
-
-    h2 {
-      font-size: 2rem;
-    }
-
-    .practice-area {
-      h3 {
-        font-size: 1.4rem;
-      }
-      h4 {
-        font-size: 1rem;
-      }
-      p,
-      li {
-        font-size: 0.95rem;
-      }
-    }
+  }
+  
+  .tabs-nav {
+    justify-content: flex-start;
+    overflow-x: auto;
+    &::-webkit-scrollbar { display: none; }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }
 
 @media (max-width: 480px) {
-  .practice {
+  .practice-container {
     padding: 2rem 1rem;
-
-    h2 {
-      font-size: 1.7rem;
-    }
-
-    .practice-area {
-      h3 {
-        font-size: 1.2rem;
-      }
-      h4 {
-        font-size: 1rem;
-      }
-      p,
-      li {
-        font-size: 0.9rem;
-      }
-    }
+    .title-wrapper h2 { font-size: 1.7rem; }
   }
+
+  .tabs-nav button {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  .tab-content h3 { font-size: 1.4rem; }
 }
