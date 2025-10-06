@@ -3,10 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import "./index.css";
 
 import Disclaimer from "./components/Disclaimer";
-import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import Home from "./pages/Home";
 import About from "./pages/About";
 import People from "./pages/People";
 import Practice from "./pages/Practice";
@@ -26,22 +25,8 @@ function App() {
         <>
           <Navbar />
           <Routes>
-   
-            <Route
-              path="/"
-              element={
-                <>
-                  <Header />
-                  <About />
-                  <People />
-                  <Practice />
-                  <Awareness />
-                  <Media />
-                  <Testimonials />
-                  <Contact />
-                </>
-              }
-            />
+
+            <Route path="/" element={<Home />} />
 
             <Route path="/about" element={<About />} />
             <Route path="/people" element={<People />} />
