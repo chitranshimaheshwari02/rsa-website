@@ -22,10 +22,7 @@ const About = () => {
         <div className="about-content">
           <h2>About Our Firm</h2>
           <p>
-            Welcome to our law practice, proudly serving clients at the Hon'ble Madhya
-            Pradesh High Court, Gwalior Bench, and the District & Family Courts of Gwalior.
-            Our team brings comprehensive legal expertise and a deep understanding of local regulations,
-            with a proven track record of success.
+            Welcome to our law practice, proudly serving clients at the Hon'ble Madhya Pradesh High Court, Gwalior Bench, and the District & Family Courts of Gwalior, as well as the Delhi High Court and District Courts, and the Rajasthan High Court, Jaipur Bench. Our team brings comprehensive legal expertise and a deep understanding of local regulations, with a proven track record of success.
           </p>
           <p>
             We specialize in Family, Divorce, Service, Civil, and Criminal matters, offering
